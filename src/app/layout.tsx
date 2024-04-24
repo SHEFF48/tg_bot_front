@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "h-screen w-full fixed flex flex-col justify-between bg-background font-sans antialiased ",
+          "h-lhv w-full fixed flex flex-col justify-between bg-background font-sans antialiased ",
           fontSans.variable
         )}
       >
