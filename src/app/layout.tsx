@@ -29,11 +29,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "h-screen w-full fixed flex flex-col justify-between bg-background font-sans antialiased ",
+          "h-screen w-full  bg-background font-sans antialiased ",
           fontSans.variable
         )}
       >
-        <div className="fixed w-full h-full top-0 bottom-0 left-0 right-0">
+        <div className="flex flex-col justify-between fixed w-full h-full top-0 bottom-0 left-0 right-0">
           <Header />
           {children}
           <Footer />
