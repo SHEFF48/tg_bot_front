@@ -34,7 +34,7 @@ export default function RootLayout({
         )}
       >
         <div className="flex flex-col justify-between fixed w-full h-full top-0 bottom-0 left-0 right-0">
-          <Header />
+          {/* <Header /> */}
           {children}
           <Footer />
         </div>
