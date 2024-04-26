@@ -31,14 +31,23 @@ export default function Home() {
               Ви отримаєте
             </h2>
             <ConditionCard title="За підписку кожного друга" price="10" />
-            <ConditionCard title="За підписку кожного друга" price="10" />
+            <ConditionCard
+              title="За підписку кожного друга"
+              price="10"
+              border
+            />
           </div>
+
           <div className="right flex flex-col items-center gap-[10px] text-center w-1/2">
             <h2 className="text-[#333333] text-[14px] font-bold">
               Друг отримає
             </h2>
             <ConditionCard title="За підписку кожного друга" price="10" />
-            <ConditionCard title="За підписку кожного друга" price="10" />
+            <ConditionCard
+              title="За підписку кожного друга"
+              price="10"
+              border
+            />
           </div>
         </div>
         <div className="font-normal text-sm leading-relaxed text-center text-gray-700 opacity-50">
