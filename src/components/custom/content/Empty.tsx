@@ -15,8 +15,8 @@ const EmptyContent: FC<IEmptyContent> = ({ image, title, description }) => {
           <Image src={image} width={128} height={128} alt="home" />
         </div>
       )}
-      {title && <h2 className="text-[#333333] text-sm font-bold">{title}</h2>}
-      {description && <p className=" text-xs text-[#a2a2a2]">{description}</p>}
+      {title && <h2 className="text-main-black text-sm font-bold">{title}</h2>}
+      {description && <p className=" text-xs text-main-gray">{description}</p>}
     </div>
   );
 };

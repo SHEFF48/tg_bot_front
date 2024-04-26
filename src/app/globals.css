@@ -1,4 +1,21 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-  
+@tailwind components;
+@tailwind utilities;
+
+@media (min-width: 300px) {
+  .text-base {
+    font-size: 16px !important;
+  }
+}
+
+@media (min-width: 400px) {
+  .text-base {
+    font-size: 18px !important;
+  }
+}
+
+@media (min-width: 500px) {
+  .text-base {
+    font-size: 20px !important;
+  }
+}

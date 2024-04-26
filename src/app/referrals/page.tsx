@@ -11,7 +11,7 @@ export default function ReferralsPage() {
       <div className="flex flex-col gap-4 justify-start h-[calc(100%-172px)] w-full">
         <div className="flex flex-col items-center justify-start gap-3 w-full z-50">
           <div className="relative text-center w-full ">
-            <h1 className=" text-[16px] font-bold relative  z-10">
+            <h1 className=" text-base font-bold relative  z-10">
               Список друзів
             </h1>
           </div>

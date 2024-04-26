@@ -10,8 +10,8 @@ const ReferralsSection = () => {
   return !isEmpty ? (
     <section className="flex flex-col justify-start items-center gap-2 w-full h-full relative overflow-hidden">
       <div className="flex justify-between items-center w-full">
-        <h2 className="text-[14px] font-bold text-[#333333]">Реферали</h2>
-        <div className="count text-[12px]  text-[#A2A2A2]">45</div>
+        <h2 className="text-sm font-bold text-main-black">Реферали</h2>
+        <div className="count text-xs  text-main-gray">45</div>
       </div>
       <ScrollArea className="w-full h-full">
         <ReferralsList />

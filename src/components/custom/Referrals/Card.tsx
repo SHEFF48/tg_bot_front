@@ -25,14 +25,14 @@ const ReferralCard: FC<IRefferalItem> = (props) => {
       <div className="user flex justify-start flex-shrink items-start gap-2 ">
         <Avatar className="w-[32px] h-[32px] shrink-0">
           <AvatarImage src={props.avatar} />
-          <AvatarFallback className="bg-[#05BB43] text-white">
+          <AvatarFallback className="bg-main-green text-white">
             {props.nickName[1]}
             {props.network[0]}
           </AvatarFallback>
         </Avatar>
         <div className="body flex flex-col justify-start items-start h-full gap-[1px] shrink">
-          <h3 className="  min-w-[100px]  line-clamp-1  text-[14px] text-[#333333]">{`${props.nickName} ${props.network}`}</h3>
-          <p className="text-[12px] text-[#A2A2A2]">{props.condition}</p>
+          <h3 className="  min-w-[100px]  line-clamp-1  text-sm text-main-black">{`${props.nickName} ${props.network}`}</h3>
+          <p className="text-xs text-main-gray">{props.condition}</p>
         </div>
       </div>
 

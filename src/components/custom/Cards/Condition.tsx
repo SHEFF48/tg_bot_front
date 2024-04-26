@@ -30,7 +30,7 @@ const ConditionCard: FC<ICondition> = ({
           className && className
         )}
       >
-        <h3 className=" text-[12px]">{title}</h3>
+        <h3 className=" text-xs">{title}</h3>
         <Price price={price} />
       </div>
     </div>
@@ -40,7 +40,7 @@ const ConditionCard: FC<ICondition> = ({
     //     className && className
     //   )}
     // >
-    //   <h3 className=" text-[12px]">{title}</h3>
+    //   <h3 className=" text-xs">{title}</h3>
     //   <Price price={price} />
     // </div>
   );

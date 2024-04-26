@@ -34,7 +34,7 @@ const RulesItem = ({ children }: { children: ReactNode }) => {
   return (
     <div className="flex items-start justify-start gap-1 leading-[130%]">
       <Marker />
-      <div className="flex items-start text-[14px] font-light">{children}</div>
+      <div className="flex items-start text-sm font-light">{children}</div>
     </div>
   );
 };
@@ -43,7 +43,7 @@ const RulesSection = () => {
   return (
     <section className="flex flex-col justify-start items-start text-left gap-4 w-full h-full relative">
       <div className="flex justify-between items-center w-full">
-        <h2 className="text-[14px] font-bold text-[#333333]">
+        <h2 className="text-sm font-bold text-main-black">
           Як використовувати купон?
         </h2>
       </div>

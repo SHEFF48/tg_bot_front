@@ -29,8 +29,8 @@ const MenuItem: FC<IMenuItem> = ({ id, title, url, icon, isActive }) => {
       <Link
         href={url}
         className={cn(
-          "flex flex-col items-center justify-center text-[#A2A2A2] hover:text-[#05BB43] gap-[4px] w-[76px] h-full  cursor-pointer",
-          isActive ? "text-[#05BB43]" : ""
+          "flex flex-col items-center justify-center text-main-gray hover:text-main-green gap-[4px] w-[76px] h-full  cursor-pointer",
+          isActive ? "text-main-green" : ""
         )}
       >
         <span className="icon flex justify-center items-center h-[28px] w-[28px]  shrink-0">
@@ -39,7 +39,7 @@ const MenuItem: FC<IMenuItem> = ({ id, title, url, icon, isActive }) => {
             <CurentIcon className="h-[24px] w-[24px] " isActive={isActive} />
           )}
         </span>
-        <span className="title text-center text-[12px] font-normal break-words w-full     shrink-0 ">
+        <span className="title text-center text-xs font-normal break-words w-full     shrink-0 ">
           {title}
         </span>
       </Link>

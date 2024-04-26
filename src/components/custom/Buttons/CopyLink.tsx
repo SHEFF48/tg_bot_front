@@ -43,7 +43,7 @@ const CopyLink: FC<ICopyLink> = ({
                 className="flex justify-between items-center gap-2 cursor-pointer h-[40px] w-full px-2 rounded-[10px] bg-white shadow-[0_1px_10px_0_rgba(32,_32,_32,_0.15)] "
                 onClick={clickHandler}
               >
-                <div className="text-[14px]">{link}</div>
+                <div className="text-sm">{link}</div>
                 <CopyIcon />
               </div>
             </TooltipTrigger>
@@ -59,7 +59,7 @@ const CopyLink: FC<ICopyLink> = ({
           onClick={clickHandler}
         >
           <CopyIcon />
-          <div className="text-[14px]">
+          <div className="text-sm">
             {!copyStatus ? "Скопіювати посилання" : "Посилання скопійовано"}
           </div>
         </div>

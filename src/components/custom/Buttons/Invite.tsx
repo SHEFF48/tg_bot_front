@@ -25,7 +25,7 @@ const PopoverButton = () => {
     <Popover>
       <PopoverTrigger className="w-full" asChild>
         <Button
-          className="shadow-md text-[14px] font-bold rounded-lg p-1 md:p-2 w-full h-10 bg-gradient-to-l from-yellow-400 to-green-500"
+          className="shadow-md text-sm font-bold rounded-lg p-1 md:p-2 w-full h-10 bg-gradient-to-l from-yellow-400 to-green-500"
           // onClick={clickHandler}
         >
           Запросити друга
@@ -33,11 +33,11 @@ const PopoverButton = () => {
       </PopoverTrigger>
       <PopoverContent
         side="top"
-        className=" rounded-[10px] w-[calc(100vw-30px)]"
+        className=" rounded-[10px] w-[calc(100vw-2rem)]"
       >
         <div className="flex flex-col gap-2">
-          <div className="close h-1 w-[40px] bg-[#a2a2a2] opacity-25 mx-auto"></div>
-          <h2 className="text-[16px] font-bold">Запросити друга</h2>
+          <div className="close h-1 w-[40px] bg-main-gray opacity-25 mx-auto"></div>
+          <h2 className="text-base font-bold">Запросити друга</h2>
           <ScrollArea className="w-full whitespace-nowrap ">
             <div className="flex gap-4">
               {[...Array(20)]?.map((_, index) => (
@@ -46,7 +46,7 @@ const PopoverButton = () => {
                   className="flex flex-col gap-2 items-center justify-center"
                 >
                   <div className="w-[32px] h-[32px] bg-slate-500 rounded-full"></div>
-                  <h3 className="text-[12px] text-[#333333]">Social Network</h3>
+                  <h3 className="text-xs text-main-black">Social Network</h3>
                 </div>
               ))}
               <div className="w-20 h-10 bg-slate-100"></div>
@@ -114,7 +114,7 @@ const PopoverButton = () => {
                 </defs>
               </svg>
             </div>
-            <div className="text-[14px]">
+            <div className="text-sm">
               {!copyStatus ? "Скопіювати посилання" : "Посилання скопійовано"}
             </div>
           </div>
@@ -128,7 +128,7 @@ const InviteButton = () => {
   const clickHandler = () => {};
   return (
     // <Button
-    //   className="shadow-md text-[14px] font-bold rounded-lg p-1 md:p-2 w-full h-10 bg-gradient-to-l from-yellow-400 to-green-500"
+    //   className="shadow-md text-sm font-bold rounded-lg p-1 md:p-2 w-full h-10 bg-gradient-to-l from-yellow-400 to-green-500"
     //   onClick={clickHandler}
     // >
     //   Запросити друга

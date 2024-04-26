@@ -17,7 +17,7 @@ const Price: FC<IPrice> = ({
   return (
     <div
       className={cn(
-        "flex items-center justify-center text-[14px] gap-1 font-bold text-white bg-[#05bb43] rounded-[10px] px-2 h-[28px]",
+        "flex items-center justify-center text-sm gap-1 font-bold text-white bg-main-green rounded-[10px] px-2 h-[28px]",
         className
       )}
     >

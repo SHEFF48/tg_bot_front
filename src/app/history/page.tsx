@@ -7,7 +7,7 @@ export default function HistoryPage() {
       <div className="flex flex-col gap-4 justify-start w-full">
         <div className="flex flex-col items-center justify-start gap-3 w-full z-50">
           <div className="relative text-center w-full ">
-            <h1 className=" text-[16px] font-bold relative  z-10">Історія</h1>
+            <h1 className=" text-base font-bold relative  z-10">Історія</h1>
           </div>
         </div>
         <HistorySection />
