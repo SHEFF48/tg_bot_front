@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn, formatPrice } from "@/lib/utils";
 import React, { FC } from "react";
 
 interface IPrice {
@@ -23,7 +23,7 @@ const Price: FC<IPrice> = ({
     >
       <span>
         {type === "plus" && "+"}
-        {price}
+        {formatPrice(Number(price))}
       </span>
       <span>{currency ? currency : "грн"}</span>
     </div>
