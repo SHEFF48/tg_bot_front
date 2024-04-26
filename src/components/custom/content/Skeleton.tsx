@@ -12,7 +12,7 @@ const SceletonImage = () => (
 const SceletonReferralCard = () => (
   <div
     className={
-      "card flex justify-between items-center gap-2 w-full h-auto p-2 rounded-lg shadow-[0_1px_10px_0_rgba(32,32,32,0.15)] bg-white"
+      "card flex justify-between items-center gap-2 w-full h-auto p-2 rounded-lg shadow-custom bg-white"
     }
   >
     <div className="user flex justify-start flex-shrink items-start gap-2 ">

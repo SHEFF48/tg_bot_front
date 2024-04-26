@@ -24,6 +24,9 @@ const config = {
         "main-green": "#05bb43",
         "main-gray": "#A2A2A2",
       },
+      boxShadow: {
+        custom: "0 1px 10px 0 rgba(32, 32, 32, 0.15)",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

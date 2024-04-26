@@ -3,14 +3,14 @@ import Price from "../Sticks/Price";
 export function HistoryTable() {
   return (
     <div className="flex flex-col gap-2 w-full">
-      <div className="flex justify-between items-center text-xs text-main-gray h-[30px] w-full px-2 rounded-[10px] shadow-[0_1px_10px_0_rgba(32,32,32,0.15)]">
+      <div className="flex justify-between items-center text-xs text-main-gray h-[30px] w-full px-2 rounded-[10px] shadow-custom">
         <div className="div">Послуга</div>
         <div className="flex justify-end  items-center gap-[16px]">
           <div className="w-[46px] text-center">Друзів</div>
           <div className="div">Нараховано</div>
         </div>
       </div>
-      <div className="flex justify-between items-center text-xs text-main-black h-[44px] w-full px-2 rounded-[10px] shadow-[0_1px_10px_0_rgba(32,32,32,0.15)]">
+      <div className="flex justify-between items-center text-xs text-main-black h-[44px] w-full px-2 rounded-[10px] shadow-custom">
         <div className="text-sm font-bold">Підписались</div>
         <div className="flex justify-end items-center gap-[16px]">
           <div className="w-[46px] text-center">2</div>
@@ -19,7 +19,7 @@ export function HistoryTable() {
           </div>
         </div>
       </div>
-      <div className="flex justify-between items-center text-xs text-main-black h-[44px] w-full px-2 rounded-[10px] shadow-[0_1px_10px_0_rgba(32,32,32,0.15)]">
+      <div className="flex justify-between items-center text-xs text-main-black h-[44px] w-full px-2 rounded-[10px] shadow-custom">
         <div className="text-sm font-bold">Купили товар</div>
         <div className="flex justify-end items-center gap-[16px]">
           <div className="w-[46px] text-center">12</div>

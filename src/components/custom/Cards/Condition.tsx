@@ -26,7 +26,7 @@ const ConditionCard: FC<ICondition> = ({
     >
       <div
         className={cn(
-          "card flex flex-col justify-center items-center gap-1 w-full p-2 rounded-lg shadow-md bg-white",
+          "card flex flex-col justify-center items-center gap-1 w-full p-2 rounded-lg  shadow-custom bg-white",
           className && className
         )}
       >

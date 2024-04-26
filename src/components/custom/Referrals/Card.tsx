@@ -20,7 +20,7 @@ const ReferralCard: FC<IRefferalItem> = (props) => {
     <Suspense fallback={<SkeletonCustom variant="referral" />}>
       <div
         className={cn(
-          "card flex justify-between items-center gap-2 w-full h-auto p-2 rounded-lg shadow-[0_1px_10px_0_rgba(32,32,32,0.15)] bg-white",
+          "card flex justify-between items-center gap-2 w-full h-auto p-2 rounded-lg shadow-custom bg-white",
           props?.className && props?.className
         )}
       >
@@ -47,7 +47,7 @@ const ReferralCard: FC<IRefferalItem> = (props) => {
 
     // <div
     //   className={cn(
-    //     "card flex justify-between items-center gap-2 w-full h-auto p-2 rounded-lg shadow-[0_1px_10px_0_rgba(32,32,32,0.15)] bg-white",
+    //     "card flex justify-between items-center gap-2 w-full h-auto p-2 rounded-lg shadow-custom bg-white",
     //     props?.className && props?.className
     //   )}
     // >
