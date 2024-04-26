@@ -6,7 +6,7 @@ import InviteButton from "../Buttons/Invite";
 import EmptyContent from "../content/Empty";
 
 const ReferralsSection = () => {
-  const isEmpty = true;
+  const isEmpty = false;
   return !isEmpty ? (
     <section className="flex flex-col justify-start items-center gap-2 w-full h-full relative overflow-hidden">
       <div className="flex justify-between items-center w-full">

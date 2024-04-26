@@ -1,8 +1,10 @@
 import CopyLink from "@/components/custom/Buttons/CopyLink";
 import InviteButton from "@/components/custom/Buttons/Invite";
 import ConditionCard from "@/components/custom/Cards/Condition";
+import SkeletonCustom from "@/components/custom/content/Skeleton";
 
 import Image from "next/image";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -24,7 +26,9 @@ export default function Home() {
             <CopyLink link="http:referal.link" visibility />
           </div>
           <div className="image -mt-2">
-            <Image src={"/home.svg"} width={128} height={128} alt="home" />
+            <Suspense fallback={<SkeletonCustom variant="image" />}>
+              <Image src={"/home.svg"} width={128} height={128} alt="home" />
+            </Suspense>
           </div>
           <div className="conditions flex gap-[10px] w-full">
             <div className="left flex flex-col items-center gap-[10px] text-center w-1/2">

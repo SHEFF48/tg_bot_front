@@ -4,7 +4,7 @@ import Image from "next/image";
 import EmptyContent from "../content/Empty";
 
 const HistorySection = () => {
-  const isEmpty = true;
+  const isEmpty = false;
   return (
     <section className="flex flex-col justify-start items-center gap-4 w-full h-full relative">
       {!isEmpty ? (
