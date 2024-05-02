@@ -42,10 +42,27 @@ async function getData(API_URL: string | undefined) {
 // };
 
 export async function getRefferalLink(user_id: string) {
-  const URL = `/link/${user_id}`;
-  const res = await getData(URL);
+  if (!user_id) {
+    throw new Error("user_id is not defined");
+  }
+
+  const res = await fetch(`/link/${user_id}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
   const data = await res.json();
   return Response.json(data);
+  // const URL = `/link/${user_id}`;
+  // const res = await getData(URL);
+  // const data = await res.json();
+  // return Response.json(data);
 }
 
 export async function getRefferals(user_id: string) {
