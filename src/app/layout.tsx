@@ -38,7 +38,7 @@ export default function RootLayout({
       >
         <div className="flex flex-col justify-between fixed w-full h-full top-0 bottom-0 left-0 right-0 text-main-black">
           <Script
-            strategy="afterInteractive"
+            strategy="beforeInteractive"
             src="https://telegram.org/js/telegram-web-app.js"
           />
           {/* <Header /> */}
