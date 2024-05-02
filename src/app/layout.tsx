@@ -5,9 +5,10 @@ import "./globals.css";
 
 // const inter = Inter({ subsets: ["latin"] });
 
-import { cn } from "@/lib/utils";
+import { cn, getUserId } from "@/lib/utils";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import Script from "next/script";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -25,6 +26,20 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  interface Window {
+    tg?: {
+      isExpanded: boolean;
+      expand: () => void;
+      // Add other properties/methods as needed
+    };
+  }
+
+  if ((window as any).tg && !(window as any).tg.isExpanded) {
+    (window as any).tg.expand();
+  }
+
+  const USER_ID = getUserId();
+
   return (
     <html lang="en" className="text-base">
       <body
@@ -34,6 +49,10 @@ export default function RootLayout({
         )}
       >
         <div className="flex flex-col justify-between fixed w-full h-full top-0 bottom-0 left-0 right-0 text-main-black">
+          <Script
+            strategy="beforeInteractive"
+            src="https://telegram.org/js/telegram-web-app.js"
+          />
           {/* <Header /> */}
           {children}
           <Footer />
