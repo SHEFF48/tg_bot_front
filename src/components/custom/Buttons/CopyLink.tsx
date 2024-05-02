@@ -27,7 +27,8 @@ const CopyLink: FC<ICopyLink> = ({
   const [referralLink, setReferralLink] = useState<any>(null);
 
   useEffect(() => {
-    setReferralLink(getRefferalLink("5928954497"));
+    // setReferralLink(getRefferalLink("5928954497"));
+    setReferralLink(getRefferalLink("332877581"));
   }, []);
 
   const { userId } = useUser();
