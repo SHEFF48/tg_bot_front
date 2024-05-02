@@ -10,6 +10,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Script from "next/script";
 import ClientLayout from "@/components/layout/ClientLayout";
+import { UserProvider } from "./providers/UserContext";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -37,14 +38,17 @@ export default function RootLayout({
       >
         <div className="flex flex-col justify-between fixed w-full h-full top-0 bottom-0 left-0 right-0 text-main-black">
           <Script
-            strategy="beforeInteractive"
+            strategy="afterInteractive"
             src="https://telegram.org/js/telegram-web-app.js"
           />
           {/* <Header /> */}
-
-          <ClientLayout>client layout</ClientLayout>
-          {children}
-          <Footer />
+          <ClientLayout>client</ClientLayout>
+          <UserProvider>
+            <>
+              {children}
+              <Footer />
+            </>
+          </UserProvider>
         </div>
       </body>
     </html>

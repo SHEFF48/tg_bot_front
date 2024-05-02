@@ -51,3 +51,5 @@ const getTransactionHistory = (user_id: string) => {
     console.error("Error fetching data getTransactionHistory:", error);
   }
 };
+
+const setUserId = () => {};

@@ -2,6 +2,7 @@ import CopyLink from "@/components/custom/Buttons/CopyLink";
 import InviteButton from "@/components/custom/Buttons/Invite";
 import ConditionCard from "@/components/custom/Cards/Condition";
 import SkeletonCustom from "@/components/custom/content/Skeleton";
+import ClientLayout from "@/components/layout/ClientLayout";
 
 import Image from "next/image";
 import { Suspense } from "react";
@@ -16,6 +17,7 @@ export default function Home() {
             <h1 className=" text-lg font-black relative uppercase z-10">
               <span className="">ДОДАТКОВІ БОНУСИ</span>
             </h1>
+            <ClientLayout>client layout</ClientLayout>
           </div>
         </div>
         <div className="top flex flex-col items-center justify-start gap-5 h-full w-full p-4 ">
