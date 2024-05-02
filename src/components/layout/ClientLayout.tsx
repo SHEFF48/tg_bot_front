@@ -1,3 +1,5 @@
+"use client";
+
 import { getUserId } from "@/lib/utils";
 import React, { ReactNode } from "react";
 
