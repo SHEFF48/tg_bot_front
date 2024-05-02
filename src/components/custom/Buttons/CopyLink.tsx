@@ -60,7 +60,7 @@ const CopyLink: FC<ICopyLink> = ({
               </div>
             </TooltipTrigger>
             <TooltipContent hideWhenDetached={true} side="bottom" align="end">
-              <p>Посилання скопійовано</p>
+              <p>Посилання cкопійовано</p>
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
