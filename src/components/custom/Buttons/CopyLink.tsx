@@ -55,7 +55,7 @@ const CopyLink: FC<ICopyLink> = ({
                 onClick={clickHandler}
               >
                 <div className="text-sm">{referralLink}</div>
-                <pre>{JSON.parse(referralLink)}</pre>
+                <pre>{JSON.stringify(referralLink)}</pre>
                 <CopyIcon />
               </div>
             </TooltipTrigger>
