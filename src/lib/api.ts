@@ -46,7 +46,7 @@ export async function getRefferalLink(user_id: string) {
     throw new Error("user_id is not defined");
   }
 
-  const res = await fetch(`/link/${user_id}`, {
+  const res = await fetch(`/api/link/${user_id}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -54,7 +54,11 @@ export async function getRefferalLink(user_id: string) {
   });
 
   if (!res.ok) {
-    throw new Error(`Failed to fetch data. RESPONSE: ${JSON.stringify(res)}`);
+    throw new Error(
+      `Failed to fetch data. RESPONSE: ${JSON.stringify(
+        res
+      )}, user_id: ${user_id}`
+    );
   }
 
   const data = await res.json();
