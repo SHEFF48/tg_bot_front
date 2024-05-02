@@ -16,7 +16,12 @@ const ClientLayout = ({ children }: { children: ReactNode }) => {
 
   const USER_ID = getUserId();
   const refferalLink = getRefferalLink("5928954497");
-  return <>{children}</>;
+  return (
+    <>
+      <p>Ref link: {refferalLink}</p>
+      {children}
+    </>
+  );
 };
 
 export default ClientLayout;
