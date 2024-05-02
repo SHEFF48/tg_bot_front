@@ -37,16 +37,18 @@ const CopyLink: FC<ICopyLink> = ({
         const res = await fetch(
           "https://8c20-79-132-3-223.ngrok-free.app/get_refferal_link/?user_id=332877581"
         );
-        console.log(" getRefLink userId res: ", URL);
+        console.log(" getRefLink userId res: ", res);
         const data = await res.json();
         console.log(" getRefLink userId res data ", res);
-        return Response.json(data);
+        setReferralLink(data);
+        // return Response.json(data);
       } catch (error) {
         console.log("Error Fetching data getRefLink", error, "URL: ", `${URL}`);
       }
     };
 
-    setReferralLink(getRefLink());
+    console.log(" getRefLink userId res: ", URL);
+    getRefLink();
   }, []);
 
   const { userId } = useUser();
