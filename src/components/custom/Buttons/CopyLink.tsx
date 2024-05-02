@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { toast } from "sonner";
 import CopyIcon from "@/components/custom/menu-icons/Copy";
 
@@ -10,6 +10,8 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { useUser } from "@/app/providers/UserContext";
+import { getRefferalLink } from "@/lib/api";
 
 interface ICopyLink {
   link?: string;
@@ -22,6 +24,15 @@ const CopyLink: FC<ICopyLink> = ({
   visibility = true,
   variant = "page",
 }) => {
+  const [referralLink, setReferralLink] = useState<any>(null);
+
+  useEffect(() => {
+    setReferralLink(getRefferalLink("5928954497"));
+  }, []);
+
+  const { userId } = useUser();
+  // const refferalLink = getRefferalLink("5928954497");
+
   const [copyStatus, setCopyStatus] = useState(false);
   const clickHandler = () => {
     navigator.clipboard.writeText(link);
@@ -43,7 +54,8 @@ const CopyLink: FC<ICopyLink> = ({
                 className="flex justify-between items-center gap-2 cursor-pointer h-[40px] w-full px-2 rounded-[10px] bg-white shadow-[0_1px_10px_0_rgba(32,_32,_32,_0.15)] "
                 onClick={clickHandler}
               >
-                <div className="text-sm">{link}</div>
+                <div className="text-sm">{referralLink}</div>
+                <pre>{JSON.parse(referralLink)}</pre>
                 <CopyIcon />
               </div>
             </TooltipTrigger>

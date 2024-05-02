@@ -1,55 +1,92 @@
-"use server";
+// const API_URL = process.env.API_URL;
 
-const API_URL = process.env;
+async function getData(API_URL: string | undefined) {
+  if (!API_URL) {
+    throw new Error("API URL is not defined");
+  }
 
-interface Window {
-  Telegram: any; // You can specify a more specific type if available
+  const res = await fetch(API_URL, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  const data = await res.json();
+  return Response.json(data);
 }
 
-const getData = async (URL: string): Promise<string> => {
-  try {
-    const response = await fetch(`${URL}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+// const getData = async (URL: string): Promise<string> => {
+//   try {
+//     const response = await fetch(`${URL}`, {
+//       // next: { tags: ["messages"] },
+//       cache: "no-cache",
+//     });
 
-    if (!response.ok) {
-      throw new Error(`Failed to fetch data`);
-    }
+//     const data = await response.json();
+//     console.log("response:", response);
+//     if (!response.ok) {
+//       throw new Error(`Failed to fetch data`);
+//     }
 
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    throw error;
-  }
-};
+//     // const data = await response.json();
+//     return data;
+//   } catch (error) {
+//     console.error("Error fetching data:", error);
+//     throw error;
+//   }
+// };
 
-const getRefferalLink = (user_id: string) => {
-  try {
-    const response = getData(`${API_URL}/get_refferal_link/${user_id}`);
-    return response;
-  } catch (error) {
-    console.error("Error fetching data getRefferalLink:", error);
-  }
-};
+export async function getRefferalLink(user_id: string) {
+  const URL = `/link/${user_id}`;
+  const res = await getData(URL);
+  const data = await res.json();
+  return Response.json(data);
+}
 
-const getRefferals = (user_id: string) => {
-  try {
-    const response = getData(`${API_URL}/get_refferals/${user_id}`);
-  } catch (error) {
-    console.error("Error fetching data getRefferals:", error);
-  }
-};
+export async function getRefferals(user_id: string) {
+  const URL = `/get_refferal_link/${user_id}`;
+  const res = await getData(URL);
+  const data = await res.json();
+  return Response.json(data);
+}
 
-const getTransactionHistory = (user_id: string) => {
-  try {
-    const response = getData(`${API_URL}/get_transaction_history/${user_id}`);
-  } catch (error) {
-    console.error("Error fetching data getTransactionHistory:", error);
-  }
-};
+export async function getTransactionHistory(user_id: string) {
+  const URL = `/get_refferal_link/${user_id}`;
+  const res = await getData(URL);
+  const data = await res.json();
+  return Response.json(data);
+}
+
+// export const getRefferalLink = async (user_id: string) => {
+//   try {
+//     const response = await getData(`${API_URL}/get_refferal_link/${user_id}`);
+//     // const data = await response.json();
+//     console.log("response:", response);
+//     return true;
+//   } catch (error) {
+//     console.error("Error fetching data getRefferalLink:", error);
+//   }
+// };
+
+// const getRefferals = (user_id: string) => {
+//   try {
+//     const response = getData(`${API_URL}/get_refferals/${user_id}`);
+//   } catch (error) {
+//     console.error("Error fetching data getRefferals:", error);
+//   }
+// };
+
+// const getTransactionHistory = (user_id: string) => {
+//   try {
+//     const response = getData(`${API_URL}/get_transaction_history/${user_id}`);
+//   } catch (error) {
+//     console.error("Error fetching data getTransactionHistory:", error);
+//   }
+// };
 
 const setUserId = () => {};
