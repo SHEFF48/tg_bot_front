@@ -39,6 +39,7 @@ export default function RootLayout({
   }
 
   const USER_ID = getUserId();
+  const refferalLink = getRefferalLink("5928954497");
 
   return (
     <html lang="en" className="text-base">
@@ -54,6 +55,7 @@ export default function RootLayout({
             src="https://telegram.org/js/telegram-web-app.js"
           />
           {/* <Header /> */}
+          <p>REFFERAL: {refferalLink}</p>
           {children}
           <Footer />
         </div>

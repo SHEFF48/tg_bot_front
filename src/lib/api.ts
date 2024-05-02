@@ -30,6 +30,7 @@ const getData = async (URL: string): Promise<string> => {
 const getRefferalLink = (user_id: string) => {
   try {
     const response = getData(`${API_URL}/get_refferal_link/${user_id}`);
+    return response;
   } catch (error) {
     console.error("Error fetching data getRefferalLink:", error);
   }
