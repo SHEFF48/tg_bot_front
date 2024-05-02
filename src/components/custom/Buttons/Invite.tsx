@@ -12,6 +12,7 @@ import {
 // import { toast } from "sonner";
 
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import CopyLink from "./CopyLink";
 
 const PopoverButton = () => {
   const [copyStatus, setCopyStatus] = useState(false);
@@ -62,7 +63,8 @@ const PopoverButton = () => {
             </div>
             <ScrollBar orientation="horizontal" />
           </ScrollArea>
-          <div
+          <CopyLink variant="tooltip" />
+          {/* <div
             className="flex justify-start items-center gap-2 cursor-pointer"
             onClick={clickHandler}
           >
@@ -114,10 +116,11 @@ const PopoverButton = () => {
                 </defs>
               </svg>
             </div>
+
             <div className="text-sm">
               {!copyStatus ? "Скопіювати посилання" : "Посилання скопійовано"}
             </div>
-          </div>
+          </div> */}
         </div>
       </PopoverContent>
     </Popover>
