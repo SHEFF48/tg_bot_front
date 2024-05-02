@@ -54,7 +54,7 @@ export async function getRefferalLink(user_id: string) {
   });
 
   if (!res.ok) {
-    throw new Error("Failed to fetch data");
+    throw new Error(`Failed to fetch data. RESPONSE: ${JSON.stringify(res)}`);
   }
 
   const data = await res.json();
