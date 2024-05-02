@@ -42,8 +42,8 @@ export default function RootLayout({
           />
           {/* <Header /> */}
 
-          <ClientLayout>{children}</ClientLayout>
-
+          <ClientLayout>client layout</ClientLayout>
+          {children}
           <Footer />
         </div>
       </body>
