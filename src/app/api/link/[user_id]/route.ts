@@ -17,6 +17,7 @@ export async function GET(
     const res = await fetch(URL);
     console.log("userId res: ", URL);
     const data = await res.json();
+    console.log("GET LINK", data);
     return Response.json(data);
   } catch (error) {
     console.log("Error Fetching data LINK", error, "URL: ", `${URL}`);

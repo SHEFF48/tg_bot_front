@@ -25,38 +25,22 @@ const CopyLink: FC<ICopyLink> = ({
   variant = "page",
 }) => {
   const [referralLink, setReferralLink] = useState<any>(null);
-
-  useEffect(() => {
-    // setReferralLink(getRefferalLink("5928954497"));
-    // setReferralLink(getRefferalLink("332877581"));
-  }, []);
+  const { userId } = useUser();
 
   useEffect(() => {
     const getRefLink = async () => {
-      try {
-        const res = await fetch(
-          "https://8c20-79-132-3-223.ngrok-free.app/get_refferal_link/?user_id=332877581"
-        );
-        console.log(" getRefLink userId res: ", res);
-        const data = await res.json();
-        console.log(" getRefLink userId res data ", res);
-        setReferralLink(data);
-        // return Response.json(data);
-      } catch (error) {
-        console.log("Error Fetching data getRefLink", error, "URL: ", `${URL}`);
-      }
+      const res = await getRefferalLink(userId || "332877581");
+      const refLink = await res.json();
+      console.log("refLink: ", refLink);
+      setReferralLink(refLink.link);
     };
 
-    console.log(" getRefLink userId res: ", URL);
     getRefLink();
-  }, []);
-
-  const { userId } = useUser();
-  // const refferalLink = getRefferalLink("5928954497");
+  }, [userId]);
 
   const [copyStatus, setCopyStatus] = useState(false);
   const clickHandler = () => {
-    navigator.clipboard.writeText(link);
+    navigator.clipboard.writeText(referralLink);
     toast(` Link copied.`);
     setCopyStatus((prev) => !prev);
 
@@ -76,7 +60,7 @@ const CopyLink: FC<ICopyLink> = ({
                 onClick={clickHandler}
               >
                 <div className="text-sm">{referralLink}</div>
-                <pre>{JSON.stringify(referralLink)}</pre>
+                {/* <pre>{JSON.stringify(referralLink)}</pre> */}
                 <CopyIcon />
               </div>
             </TooltipTrigger>

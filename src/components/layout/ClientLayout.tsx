@@ -30,7 +30,6 @@ const ClientLayout = ({ children }: { children: ReactNode }) => {
     tg?: {
       isExpanded: boolean;
       expand: () => void;
-      // Add other properties/methods as needed
     };
   }
 
@@ -40,17 +39,10 @@ const ClientLayout = ({ children }: { children: ReactNode }) => {
     }
   }, [isClient]);
 
-  // useEffect(() => {
-  //   if (!isClient && (window as any).tg && (window as any).tg.isExpanded) {
-  //     setUserId(getUserId());
-  //   }
-  // }, []);
-
-  //const refferalLink = getRefferalLink("5928954497");
   return (
     <>
-      <p>USER_ID: {userId}</p>
-      {children}
+      {/* <p>USER_ID: {userId}</p>
+      {children} */}
     </>
   );
 };

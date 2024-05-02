@@ -1,4 +1,6 @@
-// const API_URL = process.env.API_URL;
+"use server";
+
+const API_URL = process.env.API_URL;
 
 async function getData(API_URL: string | undefined) {
   if (!API_URL) {
@@ -58,7 +60,7 @@ export async function getRefferals(user_id: string) {
 
   const data = await res.json();
   console.log("Response data: ", data);
-  return Response.json(data);
+  return data;
 }
 
 export async function getTransactionHistory(user_id: string) {
