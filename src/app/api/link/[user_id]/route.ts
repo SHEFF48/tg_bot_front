@@ -8,17 +8,17 @@ export async function GET(
   { params }: { params: { user_id: string } }
 ) {
   const userId = params.user_id;
+  // console.log("userId: ", userId);
+  // return true;
+
+  const URL = `${API_URL}/get_refferal_link/?user_id=${userId}`;
 
   try {
-    const res = await fetch(`${API_URL}/get_refferal_link/${userId}`);
+    const res = await fetch(URL);
+    console.log("userId res: ", URL);
     const data = await res.json();
     return Response.json(data);
   } catch (error) {
-    console.log(
-      "Error Fetching data LINK",
-      error,
-      "URL: ",
-      `${API_URL}/get_refferal_link/${userId}`
-    );
+    console.log("Error Fetching data LINK", error, "URL: ", `${URL}`);
   }
 }

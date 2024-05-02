@@ -46,12 +46,7 @@ export async function getRefferalLink(user_id: string) {
     throw new Error("user_id is not defined");
   }
 
-  const res = await fetch(`/api/link/${user_id}`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  const res = await fetch(`/api/link/${user_id}`);
 
   if (!res.ok) {
     throw new Error(
@@ -70,14 +65,14 @@ export async function getRefferalLink(user_id: string) {
 }
 
 export async function getRefferals(user_id: string) {
-  const URL = `/get_refferal_link/${user_id}`;
+  const URL = `/api/get_refferal_link/${user_id}`;
   const res = await getData(URL);
   const data = await res.json();
   return Response.json(data);
 }
 
 export async function getTransactionHistory(user_id: string) {
-  const URL = `/get_refferal_link/${user_id}`;
+  const URL = `/api/get_refferal_link/${user_id}`;
   const res = await getData(URL);
   const data = await res.json();
   return Response.json(data);
