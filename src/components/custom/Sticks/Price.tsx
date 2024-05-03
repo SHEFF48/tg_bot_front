@@ -22,10 +22,12 @@ const Price: FC<IPrice> = ({
       )}
     >
       <span>
-        {type === "plus" && "+"}
-        {formatPrice(Number(price))}
+        {typeof price === "number"
+          ? price
+          : `${type === "plus" && "+"}
+        ${formatPrice(Number(price))}`}
       </span>
-      <span>{currency ? currency : "грн"}</span>
+      {typeof price === "number" && <span>{currency ? currency : "грн"}</span>}
     </div>
   );
 };

@@ -46,7 +46,7 @@ export async function getRefferals(user_id: string) {
     throw new Error("user_id is not defined");
   }
 
-  const res = await fetch(`/api/get_refferal_link/${user_id}`);
+  const res = await fetch(`/api/refferals/${user_id}`);
 
   if (!res.ok) {
     throw new Error(
@@ -66,7 +66,7 @@ export async function getTransactionHistory(user_id: string) {
     throw new Error("user_id is not defined");
   }
 
-  const res = await fetch(`/api/get_transaction_history/${user_id}`);
+  const res = await fetch(`/api/user-data/${user_id}`);
 
   if (!res.ok) {
     throw new Error(
