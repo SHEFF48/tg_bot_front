@@ -4,7 +4,7 @@ import Price from "../Sticks/Price";
 
 interface ICondition {
   title: string;
-  price: string;
+  price: number | string;
   currency?: string;
   className?: string;
   border?: true | false;
