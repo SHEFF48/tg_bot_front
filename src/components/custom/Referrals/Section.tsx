@@ -38,7 +38,9 @@ const ReferralsSection = () => {
     <section className="flex flex-col justify-start items-center gap-2 w-full h-full relative overflow-hidden">
       <div className="flex justify-between items-center w-full">
         <h2 className="text-sm font-bold text-main-black">Реферали</h2>
-        <div className="count text-xs  text-main-gray">45</div>
+        <div className="count text-xs  text-main-gray">
+          {referrals?.transactions?.length || 0}
+        </div>
       </div>
       <ScrollArea className="w-full h-full">
         {referrals && <ReferralsList referrals={referrals?.transactions} />}

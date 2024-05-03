@@ -1,5 +1,6 @@
 import InviteButton from "@/components/custom/Buttons/Invite";
 import ConditionCard from "@/components/custom/Cards/Condition";
+import Balance from "@/components/custom/Referrals/Balance";
 import ReferralsSection from "@/components/custom/Referrals/Section";
 import Price from "@/components/custom/Sticks/Price";
 import { Button } from "@/components/ui/button";
@@ -15,12 +16,8 @@ export default function ReferralsPage() {
               Список друзів
             </h1>
           </div>
-          <div className="flex items-center justify-center w-full rounded-[10px] bg-gradient-to-l from-[#F4D03F]  to-[#16A085] p-[1.5px]">
-            <div className="balance flex justify-between items-center  h-[44px] w-full bg-white px-[8px]  rounded-[8px] back ">
-              <span>Баланс</span>
-              <Price price={0} />
-            </div>
-          </div>
+
+          <Balance />
         </div>
         <div className="flex flex-col justify-between  w-full h-full relative">
           <ReferralsSection />
