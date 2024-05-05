@@ -5,25 +5,7 @@ import { useUser } from "@/app/providers/UserContext";
 import React, { ReactNode, useEffect, useState } from "react";
 
 const ClientLayout = ({ children }: { children: ReactNode }) => {
-  // const [userId, setUserId] = useState();
   const { userId } = useUser();
-  // const getUserId = () => {
-  //   let USER_ID = null;
-
-  //   if ((window as any).Telegram && (window as any).Telegram.WebApp) {
-  //     if (
-  //       window.Telegram &&
-  //       window.Telegram.WebApp &&
-  //       window.Telegram.WebApp.initDataUnsafe &&
-  //       window.Telegram.WebApp.initDataUnsafe.user
-  //     ) {
-  //       window.Telegram.WebApp.ready();
-  //       USER_ID = window.Telegram.WebApp.initDataUnsafe.user.id;
-  //     }
-  //   }
-
-  //   return USER_ID;
-  // };
 
   const isClient = typeof window === "object";
   interface Window {

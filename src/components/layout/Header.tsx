@@ -1,14 +1,13 @@
 import React from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import Cancel from "../custom/Buttons/Cancel";
 
 const Header = () => {
   return (
     <header className="flex items-center justify-between text-white bg-[#333333] h-[26px] w-full shrink-0 top-0 z-20 overflow-hidden">
       <div className="flex items-center justify-between px-4 mx-auto w-full">
-        <div className="flex items-center justify-center text-white text-[10px] ">
-          Відміна
-        </div>
+        <Cancel />
         <div className="menu flex items-center justify-center  w-4 h-4 ">
           <svg
             width="17"
