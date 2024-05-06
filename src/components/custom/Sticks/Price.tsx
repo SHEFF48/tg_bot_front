@@ -28,7 +28,7 @@ const Price: FC<IPrice> = ({
         ${formatPrice(Number(price))}`}
       </span>
       {typeof price === "number" ? (
-        <span>{currency ? currency : "грн"}</span>
+        <span> {currency ? currency : "грн"}</span>
       ) : (
         ""
       )}
