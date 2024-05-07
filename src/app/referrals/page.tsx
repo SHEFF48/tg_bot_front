@@ -1,10 +1,8 @@
 import InviteButton from "@/components/custom/Buttons/Invite";
-import ConditionCard from "@/components/custom/Cards/Condition";
+
 import Balance from "@/components/custom/Referrals/Balance";
 import ReferralsSection from "@/components/custom/Referrals/Section";
-import Price from "@/components/custom/Sticks/Price";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+
 
 export default function ReferralsPage() {
   return (

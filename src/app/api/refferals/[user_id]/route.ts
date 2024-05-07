@@ -13,11 +13,11 @@ export async function GET(
 
   try {
     const res = await fetch(URL);
-    console.log("userId res: ", URL);
+
     const data = await res.json();
-    console.log("userId res data ", res);
+
     return Response.json(data);
   } catch (error) {
-    console.log("Error Fetching data LINK", error, "URL: ", `${URL}`);
+    console.log("Error Fetching data ", error);
   }
 }

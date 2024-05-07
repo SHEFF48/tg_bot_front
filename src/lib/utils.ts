@@ -14,13 +14,13 @@ export const getUserId = () => {
 
   if ((window as any).Telegram && (window as any).Telegram.WebApp) {
     if (
-      window.Telegram &&
-      window.Telegram.WebApp &&
-      window.Telegram.WebApp.initDataUnsafe &&
-      window.Telegram.WebApp.initDataUnsafe.user
+      (window as any).Telegram &&
+      (window as any).Telegram.WebApp &&
+      (window as any).Telegram.WebApp.initDataUnsafe &&
+      (window as any).Telegram.WebApp.initDataUnsafe.user
     ) {
-      window.Telegram.WebApp.ready();
-      USER_ID = window.Telegram.WebApp.initDataUnsafe.user.id;
+      (window as any).Telegram.WebApp.ready();
+      USER_ID = (window as any).Telegram.WebApp.initDataUnsafe.user.id;
     }
   }
 

@@ -20,7 +20,6 @@ interface IHistory {
 }
 
 export const HistoryTable: FC<IHistory> = (props) => {
-  console.log("PROPS:", props);
   return (
     <div className="flex flex-col gap-2 w-full">
       <div className="flex justify-between items-center text-xs text-main-gray h-[30px] w-full px-2 rounded-[10px] shadow-custom">

@@ -14,9 +14,8 @@ const HistorySection = () => {
 
   useEffect(() => {
     const getHistoryData = async () => {
-      const res = await getTransactionHistory(userId || "332877581");
+      const res = await getTransactionHistory(userId);
       const referralsData = await res.json();
-      console.log(" x: ", referralsData);
 
       setHistory(referralsData);
     };
@@ -28,10 +27,6 @@ const HistorySection = () => {
     setIsEmpty(history ? false : true);
   }, [history]);
 
-  console.log("isEmpty", isEmpty);
-  console.log("referrs", history);
-
-  // return <></>;
   return (
     <section className="flex flex-col justify-start items-center gap-4 w-full h-full relative">
       {!isEmpty ? (

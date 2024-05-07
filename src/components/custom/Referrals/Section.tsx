@@ -15,9 +15,8 @@ const ReferralsSection = () => {
 
   useEffect(() => {
     const getReferralsData = async () => {
-      const res = await getRefferals(userId || "332877581");
+      const res = await getRefferals(userId);
       const referralsData = await res.json();
-      console.log(" x: ", referralsData);
 
       setReferrals(referralsData);
     };
@@ -28,9 +27,6 @@ const ReferralsSection = () => {
   useEffect(() => {
     setIsEmpty(referrals ? false : true);
   }, [referrals]);
-
-  console.log("isEmpty", isEmpty);
-  console.log("referrs", referrals);
 
   // return <></>;
 

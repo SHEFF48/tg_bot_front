@@ -13,7 +13,7 @@ const Balance = () => {
 
   useEffect(() => {
     const getHistoryData = async () => {
-      const res = await getTransactionHistory(userId || "332877581");
+      const res = await getTransactionHistory(userId);
       const referralsData = await res.json();
 
       setHistory(referralsData);
