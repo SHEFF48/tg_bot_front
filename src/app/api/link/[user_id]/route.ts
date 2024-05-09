@@ -14,7 +14,9 @@ export async function GET(
   const URL = `${API_URL}/get_refferal_link/?user_id=${userId}`;
 
   try {
-    const res = await fetch(URL);
+    const res = await fetch(URL, {
+      cache: "no-cache",
+    });
 
     const data = await res.json();
 
