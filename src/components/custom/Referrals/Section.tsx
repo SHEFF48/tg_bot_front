@@ -25,7 +25,7 @@ const ReferralsSection = () => {
   }, [userId]);
 
   useEffect(() => {
-    setIsEmpty(referrals ? false : true);
+    setIsEmpty(referrals?.transactions?.length > 0 ? false : true);
   }, [referrals]);
 
   // return <></>;
