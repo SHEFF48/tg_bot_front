@@ -29,7 +29,7 @@ const CopyLink: FC<ICopyLink> = ({
 
   useEffect(() => {
     const getRefLink = async () => {
-      const res = await getRefferalLink(userId || "332877581");
+      const res = await getRefferalLink(userId);
       const refLink = await res.json();
       console.log("refLink: ", refLink);
       setReferralLink(refLink.link);
