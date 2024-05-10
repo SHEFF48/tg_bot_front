@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="relative flex h-full w-full flex-col items-center justify-between  overflow-y-auto ">
       <div className="flex flex-col w-full">
-        <div className="top flex flex-col items-center justify-start gap-4 h-full w-full p-4 ">
+        <div className="top flex flex-col items-center justify-start gap-4 h-full w-full p-4 pb-0 ">
           <div className="relative text-center">
             <p className="text-sm">Запросіть друзів, та отримуйте </p>
             <h1 className=" text-lg font-black relative uppercase z-10">
