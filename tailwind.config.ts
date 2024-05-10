@@ -23,6 +23,7 @@ const config = {
         "main-black": "#333333",
         "main-green": "#05bb43",
         "main-gray": "#A2A2A2",
+        background: "#fff",
       },
       boxShadow: {
         custom: "0 1px 10px 0 rgba(32, 32, 32, 0.15)",
