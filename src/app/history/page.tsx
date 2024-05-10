@@ -1,3 +1,4 @@
+import CopyLink from "@/components/custom/Buttons/CopyLink";
 import WithdrawButton from "@/components/custom/Buttons/Withdraw";
 import HistorySection from "@/components/custom/History/Section";
 
@@ -12,8 +13,15 @@ export default function HistoryPage() {
         </div>
         <HistorySection />
       </div>
-      <div className="flex items-center justify-center w-full h-[72px] shrink-0 bg-white overflow-hidden ">
-        <WithdrawButton />
+      <div className="flex items-center justify-center w-full h-[120px] shrink-0 bg-white overflow-hidden ">
+        <div className="link flex flex-col items-center justify-center gap-2 w-full">
+          <p className="text-xs text-center">Ваш промокод на знижку</p>
+          <CopyLink visibility />
+          <p className="text-xs text-center opacity-55">
+            Використайте його у кошику на сайті gem.shoes при оформленні
+            замовлення
+          </p>
+        </div>
       </div>
     </main>
   );

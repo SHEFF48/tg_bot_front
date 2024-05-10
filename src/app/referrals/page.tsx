@@ -3,7 +3,6 @@ import InviteButton from "@/components/custom/Buttons/Invite";
 import Balance from "@/components/custom/Referrals/Balance";
 import ReferralsSection from "@/components/custom/Referrals/Section";
 
-
 export default function ReferralsPage() {
   return (
     <main className="relative flex w-full h-full flex-col items-center justify-between pt-[26px] px-4 overflow-hidden ">

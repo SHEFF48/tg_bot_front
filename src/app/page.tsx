@@ -11,55 +11,54 @@ export default function Home() {
   return (
     <main className="relative flex h-full w-full flex-col items-center justify-between  overflow-y-auto ">
       <div className="flex flex-col w-full">
-        <div className="bg bg-gradient-to-l from-[#F4D03F]  to-[#16A085]  mx-auto w-full pt-[24px] rounded-b-[10px]">
-          <div className="relative text-center text-white p-1 bg-gradient-to-l from-[#F4D03F] w-full to-[#16A085] rounded-b-[10px]">
+        <div className="top flex flex-col items-center justify-start gap-4 h-full w-full p-4 ">
+          <div className="relative text-center">
             <p className="text-sm">Запросіть друзів, та отримуйте </p>
             <h1 className=" text-lg font-black relative uppercase z-10">
-              <span className="">ДОДАТКОВІ БОНУСИ</span>
+              <span className="bg-gradient-to-l from-[#F4D03F]  to-[#16A085] text-transparent bg-clip-text">
+                ДОДАТКОВІ БОНУСИ
+              </span>
             </h1>
-            <ClientLayout>client layout</ClientLayout>
-          </div>
-        </div>
-        <div className="top flex flex-col items-center justify-start gap-5 h-full w-full p-4 ">
-          <div className="link flex flex-col items-center justify-center gap-2 w-full">
-            <p className="text-xs text-center">
-              Запросіть друга за вашим посиланням
-            </p>
-            <CopyLink link="http:referal.link" visibility />
           </div>
           <div className="image -mt-2">
             <Suspense fallback={<SkeletonCustom variant="image" />}>
               <Image src={"/home.svg"} width={128} height={128} alt="home" />
             </Suspense>
           </div>
-          <div className="conditions flex gap-[10px] w-full">
-            <div className="left flex flex-col items-center gap-[10px] text-center w-1/2">
+          <div className="conditions flex  -mt-2 w-full">
+            <div className="left flex flex-col items-center gap-[10px] text-center w-full">
               <h2 className="text-main-black text-sm font-bold">
-                Ви отримаєте
+                Як це працює?
               </h2>
-              <ConditionCard title="За підписку кожного друга" price="10" />
-              <ConditionCard
-                title="За підписку кожного друга"
-                price="10"
-                border
-              />
-            </div>
 
-            <div className="right flex flex-col items-center gap-[10px] text-center w-1/2">
-              <h2 className="text-main-black text-sm font-bold">
-                Друг отримає
-              </h2>
-              <ConditionCard title="За підписку кожного друга" price="10" />
-              <ConditionCard
-                title="За підписку кожного друга"
-                price="10"
-                border
-              />
+              <div className="flex flex-col gap-[14px]">
+                <ConditionCard
+                  type="two"
+                  icon="AddFriend"
+                  description="Запросіть друга за посиланням. Він отримає знижку 200 гривень на першу покупку."
+                  border
+                  number="One"
+                />
+                <ConditionCard
+                  type="two"
+                  icon="CheckList"
+                  description="За кожного друга, що здійснить покупку, ви отримаєте 200 гривень на бонусний рахунок."
+                  border
+                  number="Two"
+                />
+                <ConditionCard
+                  type="two"
+                  icon="Gift"
+                  description="Отримайте 10 гривень за кожного друга, який підпишеться на наш телеграм-канал."
+                  border
+                  number="Three"
+                />
+              </div>
+              <div className="font-normal text-xs leading-relaxed text-center text-gray-700 opacity-50">
+                Запросити можна необмежену кількість друзів, всі вони будуть
+                відображатися в розділі Реферали
+              </div>
             </div>
-          </div>
-          <div className="font-normal text-sm leading-relaxed text-center text-gray-700 opacity-50">
-            Запросити можна необмежену кількість друзів, всі вони будуть
-            відображатися в розділі Реферали
           </div>
         </div>
       </div>
