@@ -1,4 +1,5 @@
 import InviteButton from "@/components/custom/Buttons/Invite";
+import InviteLinkButton from "@/components/custom/Buttons/InviteLink";
 
 import RulesSection from "@/components/custom/Rules/Section";
 
@@ -18,7 +19,7 @@ export default function RulesPage() {
         </div>
       </div>
       <div className="flex items-center justify-center w-full h-[72px] shrink-0 bg-white overflow-hidden ">
-        <InviteButton />
+        <InviteLinkButton />
       </div>
     </main>
   );

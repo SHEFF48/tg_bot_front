@@ -1,4 +1,5 @@
 import InviteButton from "@/components/custom/Buttons/Invite";
+import InviteLinkButton from "@/components/custom/Buttons/InviteLink";
 
 import Balance from "@/components/custom/Referrals/Balance";
 import ReferralsSection from "@/components/custom/Referrals/Section";
@@ -21,7 +22,7 @@ export default function ReferralsPage() {
         </div>
       </div>
       <div className="flex items-center justify-center w-full h-[72px] shrink-0 bg-white overflow-hidden ">
-        <InviteButton />
+        <InviteLinkButton />
       </div>
     </main>
   );

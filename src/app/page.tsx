@@ -1,5 +1,6 @@
 import CopyLink from "@/components/custom/Buttons/CopyLink";
 import InviteButton from "@/components/custom/Buttons/Invite";
+import InviteLinkButton from "@/components/custom/Buttons/InviteLink";
 import ConditionCard from "@/components/custom/Cards/Condition";
 import SkeletonCustom from "@/components/custom/content/Skeleton";
 import ClientLayout from "@/components/layout/ClientLayout";
@@ -63,7 +64,7 @@ export default function Home() {
         </div>
       </div>
       <div className="flex items-center justify-center w-full h-[72px] shrink-0 bg-white overflow-hidden px-4 ">
-        <InviteButton />
+        <InviteLinkButton />
       </div>
     </main>
   );
