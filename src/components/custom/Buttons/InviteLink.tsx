@@ -24,12 +24,23 @@ const InviteLinkButton = () => {
         // setReferralLink(refLink.link);
         // setReferralLink(JSON.stringify(refLink));
         try {
-          const res = await fetch(
-            `https://gemshoes.fun/get_refferal_link/?user_id=332877581`,
-            {
-              cache: "no-cache",
-            }
-          );
+          const res =
+            //   await fetch(
+            //   `https://gemshoes.fun/get_refferal_link/?user_id=332877581`,
+            //   {
+            //     cache: "no-cache",
+            //   }
+            // );
+
+            await fetch(
+              `https://gemshoes.fun/get_refferal_link/?user_id=332877581`,
+              {
+                method: "GET",
+                headers: {
+                  "ngrok-skip-browser-warning": "1",
+                },
+              }
+            );
           const data = await res.json();
           setReferralLink(JSON.stringify(data));
           console.log("LINK Fetching data ", data);
