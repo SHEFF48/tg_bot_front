@@ -36,9 +36,6 @@ const InviteLinkButton = () => {
               `https://gemshoes.fun/get_refferal_link/?user_id=332877581`,
               {
                 method: "GET",
-                headers: {
-                  "ngrok-skip-browser-warning": "1",
-                },
               }
             );
           const data = await res.json();
