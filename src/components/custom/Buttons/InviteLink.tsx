@@ -6,14 +6,16 @@ import Link from "next/link";
 import { useUser } from "@/app/providers/UserContext";
 // import { getRefferalLink } from "@/lib/api";
 import { Button } from "@/components/ui/button";
-import { getReferralLink } from "@/lib/utils";
+// import { getReferralLink } from "@/lib/utils";
 
 const InviteLinkButton = () => {
   const [referralLink, setReferralLink] = useState<any>(null);
   const { userId } = useUser();
 
+  // const userId = "332877581";
+
   useEffect(() => {
-    setReferralLink(getReferralLink(userId));
+    // setReferralLink(getReferralLink(userId));
 
     const getRefLink = async () => {
       if (userId) {
@@ -21,24 +23,24 @@ const InviteLinkButton = () => {
         // const refLink = await res.json();
         // setReferralLink(refLink.link);
         // setReferralLink(JSON.stringify(refLink));
-        // try {
-        //   const res = await fetch(
-        //     `https://gemshoes.fun/get_refferal_link/?user_id=332877581`,
-        //     {
-        //       cache: "no-cache",
-        //     }
-        //   );
-        //   const data = await res.json();
-        //   setReferralLink(JSON.stringify(data));
-        //   console.log("LINK Fetching data ", data);
-        //   // return Response.json(data);
-        // } catch (error) {
-        //   console.log("Error Fetching data ", error);
-        // }
+        try {
+          const res = await fetch(
+            `https://gemshoes.fun/get_refferal_link/?user_id=332877581`,
+            {
+              cache: "no-cache",
+            }
+          );
+          const data = await res.json();
+          setReferralLink(JSON.stringify(data));
+          console.log("LINK Fetching data ", data);
+          // return Response.json(data);
+        } catch (error) {
+          console.log("Error Fetching data ", error);
+        }
       }
     };
 
-    // getRefLink();
+    getRefLink();
   }, [userId]);
   return (
     <Button
