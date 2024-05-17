@@ -4,8 +4,9 @@ import React, { useEffect, useState } from "react";
 
 import Link from "next/link";
 import { useUser } from "@/app/providers/UserContext";
-import { getRefferalLink } from "@/lib/api";
+// import { getRefferalLink } from "@/lib/api";
 import { Button } from "@/components/ui/button";
+import { getReferralLink } from "@/lib/utils";
 
 const InviteLinkButton = () => {
   const [referralLink, setReferralLink] = useState<any>(null);
@@ -14,11 +15,11 @@ const InviteLinkButton = () => {
   useEffect(() => {
     const getRefLink = async () => {
       if (userId) {
-        const res = await getRefferalLink(userId);
+        const res = await getReferralLink(userId);
         const refLink = await res.json();
 
         setReferralLink(refLink.link);
-        setReferralLink(JSON.stringify(refLink));
+        // setReferralLink(JSON.stringify(refLink));
 
         // try {
         //   const res = await fetch(

@@ -11,7 +11,8 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { useUser } from "@/app/providers/UserContext";
-import { getRefferalLink } from "@/lib/api";
+import { getReferralLink } from "@/lib/utils";
+// import { getRefferalLink } from "@/lib/api";
 
 interface ICopyLink {
   link?: string;
@@ -29,7 +30,7 @@ const CopyLink: FC<ICopyLink> = ({
 
   useEffect(() => {
     const getRefLink = async () => {
-      const res = await getRefferalLink(userId);
+      const res = await getReferralLink(userId);
       const refLink = await res.json();
       console.log("refLink: ", refLink);
       setReferralLink(refLink.link);
