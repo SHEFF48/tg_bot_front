@@ -11,7 +11,7 @@ const InviteLinkButton = () => {
   const [referralLink, setReferralLink] = useState<any>(null);
   // const { userId } = useUser();
 
-  const userId = "5928954497";
+  const userId = "332877581";
   useEffect(() => {
     const getRefLink = async () => {
       if (userId) {
