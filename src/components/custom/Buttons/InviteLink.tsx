@@ -18,7 +18,7 @@ const InviteLinkButton = () => {
         const refLink = await res.json();
         console.log("refLink: ", refLink);
         // setReferralLink(refLink.link);
-        setReferralLink(JSON.stringify(refLink.link));
+        setReferralLink(JSON.stringify(refLink));
       }
     };
 
