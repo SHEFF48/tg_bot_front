@@ -22,6 +22,10 @@ async function getData(API_URL: string | undefined) {
 }
 
 export async function getRefferalLink(user_id: string | null) {
+  return Response.json({
+    link: `https://t.me/Fgem_bot?start=${user_id}`,
+  });
+
   if (!user_id) {
     throw new Error("user id is not defined");
   }
