@@ -45,7 +45,7 @@ const InviteLinkButton = () => {
       asChild
       className="shadow-md text-sm font-bold rounded-lg p-1 md:p-2 w-full h-10 bg-gradient-to-l from-yellow-400 to-green-500"
     >
-      <Link href={`https://t.me/share/url?text=Hello&url={${referralLink}}`}>
+      <Link href={`https://t.me/share/url?text=Hello&url=${referralLink}`}>
         Запросити друга
       </Link>
     </Button>
