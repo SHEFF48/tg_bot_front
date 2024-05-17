@@ -9,8 +9,9 @@ import { Button } from "@/components/ui/button";
 
 const InviteLinkButton = () => {
   const [referralLink, setReferralLink] = useState<any>(null);
-  const { userId } = useUser();
+  // const { userId } = useUser();
 
+  const userId = "5928954497";
   useEffect(() => {
     const getRefLink = async () => {
       if (userId) {
