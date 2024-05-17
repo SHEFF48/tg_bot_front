@@ -39,7 +39,7 @@ const InviteLinkButton = () => {
               }
             );
           const data = await res.json();
-          setReferralLink(JSON.stringify(data));
+          setReferralLink(data.link);
           console.log("LINK Fetching data ", data);
           // return Response.json(data);
         } catch (error) {
