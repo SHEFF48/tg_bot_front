@@ -12,7 +12,31 @@ const InviteLinkButton = () => {
   // const { userId } = useUser();
 
   const userId = "332877581";
+
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          `https://gemshoes.fun/get_refferal_link/?user_id=332877581`,
+          {
+            method: "GET",
+            headers: {
+              "ngrok-skip-browser-warning": "1",
+            },
+          }
+        );
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        setReferralLink(JSON.stringify(data));
+        console.log("data CUSTOM FETCH:", response, data);
+        // return data;
+      } catch (error) {
+        console.log("error CUSTOM FETCH:", error);
+      }
+    };
+
     const getRefLink = async () => {
       if (userId) {
         const res = await getRefferalLink(userId);
@@ -39,7 +63,8 @@ const InviteLinkButton = () => {
       }
     };
 
-    getRefLink();
+    fetchData();
+    // getRefLink();
   }, [userId]);
   return (
     <Button
