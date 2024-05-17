@@ -33,7 +33,7 @@ const InviteLinkButton = () => {
             // );
 
             await fetch(
-              `https://gemshoes.fun/get_refferal_link/?user_id=332877581`,
+              `https://gemshoes.fun/get_refferal_link/?user_id=${userId}`,
               {
                 method: "GET",
               }
