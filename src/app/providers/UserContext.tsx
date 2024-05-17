@@ -26,10 +26,14 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
 
   useEffect(() => {
     // Получаем userId из глобального объекта window
-    const userId = getUserId();
-    if (userId) {
-      setUserId(userId);
-    }
+    const getUser = async () => {
+      const userId = await getUserId();
+      if (userId) {
+        setUserId(userId);
+      }
+    };
+
+    getUser();
   }, []);
 
   return (

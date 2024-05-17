@@ -9,7 +9,7 @@ export const formatPrice = (number: number): string => {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 };
 
-export const getUserId = () => {
+export const getUserId = async () => {
   let USER_ID = null;
 
   if ((window as any).Telegram && (window as any).Telegram.WebApp) {

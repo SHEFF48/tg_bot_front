@@ -13,10 +13,12 @@ const InviteLinkButton = () => {
 
   useEffect(() => {
     const getRefLink = async () => {
-      const res = await getRefferalLink(userId);
-      const refLink = await res.json();
-      console.log("refLink: ", refLink);
-      setReferralLink(refLink.link);
+      if (userId) {
+        const res = await getRefferalLink(userId);
+        const refLink = await res.json();
+        console.log("refLink: ", refLink);
+        setReferralLink(refLink.link);
+      }
     };
 
     getRefLink();
@@ -28,6 +30,8 @@ const InviteLinkButton = () => {
     >
       <Link href={`https://t.me/share/url?text=Hello&url={${referralLink}}`}>
         Запросити друга {userId ? userId : "null"}
+        <br />
+        Ref: {referralLink}
       </Link>
     </Button>
   );
