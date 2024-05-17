@@ -13,14 +13,14 @@ const InviteLinkButton = () => {
   const { userId } = useUser();
 
   useEffect(() => {
+    setReferralLink(getReferralLink(userId));
+
     const getRefLink = async () => {
       if (userId) {
-        const res = await getReferralLink(userId);
-        const refLink = await res.json();
-
-        setReferralLink(refLink.link);
+        // const res = await getReferralLink(userId);
+        // const refLink = await res.json();
+        // setReferralLink(refLink.link);
         // setReferralLink(JSON.stringify(refLink));
-
         // try {
         //   const res = await fetch(
         //     `https://gemshoes.fun/get_refferal_link/?user_id=332877581`,
@@ -28,7 +28,6 @@ const InviteLinkButton = () => {
         //       cache: "no-cache",
         //     }
         //   );
-
         //   const data = await res.json();
         //   setReferralLink(JSON.stringify(data));
         //   console.log("LINK Fetching data ", data);
@@ -39,7 +38,7 @@ const InviteLinkButton = () => {
       }
     };
 
-    getRefLink();
+    // getRefLink();
   }, [userId]);
   return (
     <Button

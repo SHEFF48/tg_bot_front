@@ -27,8 +27,8 @@ export const getUserId = async () => {
   return USER_ID;
 };
 
-export const getReferralLink = async (user_id: string | null) => {
-  return Response.json({
+export const getReferralLink = (user_id: string | null) => {
+  return {
     link: `https://t.me/Fgem_bot?start=${user_id}`,
-  });
+  };
 };

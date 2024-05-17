@@ -29,14 +29,16 @@ const CopyLink: FC<ICopyLink> = ({
   const { userId } = useUser();
 
   useEffect(() => {
-    const getRefLink = async () => {
-      const res = await getReferralLink(userId);
-      const refLink = await res.json();
-      console.log("refLink: ", refLink);
-      setReferralLink(refLink.link);
-    };
+    // const getRefLink = async () => {
+    //   const res = await getReferralLink(userId);
+    //   const refLink = await res.json();
+    //   console.log("refLink: ", refLink);
+    //   setReferralLink(refLink.link);
+    // };
 
-    getRefLink();
+    // getRefLink();
+
+    setReferralLink(getReferralLink(userId));
   }, [userId]);
 
   const [copyStatus, setCopyStatus] = useState(false);
