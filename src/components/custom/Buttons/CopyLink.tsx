@@ -28,6 +28,27 @@ const CopyLink: FC<ICopyLink> = ({
   const [referralLink, setReferralLink] = useState<any>(null);
   const { userId } = useUser();
 
+  const getRefLink = async () => {
+    if (userId) {
+      try {
+        const res = await fetch(
+          `https://gemshoes.fun/get_refferal_link/?user_id=${userId}`,
+          {
+            method: "GET",
+          }
+        );
+        const data = await res.json();
+        setReferralLink(data.link);
+        console.log("LINK Fetching data ", data);
+        // return Response.json(data);
+      } catch (error) {
+        console.log("Error Fetching data ", error);
+      }
+    }
+  };
+
+  getRefLink();
+
   useEffect(() => {
     // const getRefLink = async () => {
     //   const res = await getReferralLink(userId);
@@ -35,11 +56,9 @@ const CopyLink: FC<ICopyLink> = ({
     //   console.log("refLink: ", refLink);
     //   setReferralLink(refLink.link);
     // };
-
     // getRefLink();
-
-    setReferralLink(getReferralLink(userId));
-  }, [userId]);
+    // setReferralLink(getReferralLink(userId));
+  }, []);
 
   const [copyStatus, setCopyStatus] = useState(false);
   const clickHandler = () => {
