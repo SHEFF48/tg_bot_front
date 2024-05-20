@@ -38,7 +38,7 @@ const CopyLink: FC<ICopyLink> = ({
           }
         );
         const data = await res.json();
-        setReferralLink(data.link);
+        setReferralLink(data.promocode);
         console.log("LINK Fetching data 0643-79-132-27-234 ", data);
         // return Response.json(data);
       } catch (error) {
