@@ -39,10 +39,10 @@ const CopyLink: FC<ICopyLink> = ({
         );
         const data = await res.json();
         setReferralLink(data.link);
-        console.log("LINK Fetching data ", data);
+        console.log("LINK Fetching data 0643-79-132-27-234 ", data);
         // return Response.json(data);
       } catch (error) {
-        console.log("Error Fetching data ", error);
+        console.log("Error Fetching data 0643-79-132-27-234", error);
       }
     }
   };
