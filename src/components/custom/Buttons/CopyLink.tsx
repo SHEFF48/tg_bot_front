@@ -34,7 +34,7 @@ const CopyLink: FC<ICopyLink> = ({
     if (userId) {
       try {
         const res = await fetch(
-          `https://0643-79-132-27-234.ngrok-free.app/get_promocode/?user_id=${userId}`,
+          `https://gemshoes.fun/get_promocode/?user_id=${userId}`,
           {
             method: "GET",
           }
