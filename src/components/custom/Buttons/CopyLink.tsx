@@ -26,7 +26,9 @@ const CopyLink: FC<ICopyLink> = ({
   variant = "page",
 }) => {
   const [referralLink, setReferralLink] = useState<any>(null);
-  const { userId } = useUser();
+  // const { userId } = useUser();
+
+  const userId = "5928954497";
 
   const getRefLink = async () => {
     if (userId) {
